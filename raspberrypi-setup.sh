@@ -28,6 +28,9 @@ curl https://get.volta.sh | bash
 volta install node
 volta install npm
 
+echo "firefoxのインストール"
+apt install -y firefox-esr
+
 echo "不要なパッケージの削除"
 sudo apt autoremove -y
 
