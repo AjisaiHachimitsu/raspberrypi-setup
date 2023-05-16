@@ -23,11 +23,10 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
-echo "nodejsのインストール"
-sudo apt install nodejs npm
-sudo npm install -g n
-sudo n stable
-sudo apt remove -y nodejs npm
+echo "voltaのインストール"
+curl https://get.volta.sh | bash
+volta install node
+volta install npm
 
 echo "不要なパッケージの削除"
 sudo apt autoremove -y
