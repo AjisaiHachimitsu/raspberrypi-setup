@@ -23,10 +23,11 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
-echo "voltaのインストール"
-curl https://get.volta.sh | bash
-volta install node
-volta install npm
+echo "nodejsのインストール"
+sudo apt install nodejs npm
+sudo npm install -g n
+sudo n stable
+sudo apt remove -y nodejs npm
 
 echo "firefoxのインストール"
 apt install -y firefox-esr
