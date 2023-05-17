@@ -23,11 +23,9 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
-echo "nodejsのインストール"
-sudo apt install nodejs npm
-sudo npm install -g n
-sudo n stable
-sudo apt remove -y nodejs npm
+echo "fnm, nodejsのインストール"
+curl -fsSL https://fnm.vercel.app/install | bash
+fnm install --lts
 
 echo "firefoxのインストール"
 apt install -y firefox-esr
