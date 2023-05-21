@@ -25,6 +25,7 @@ sudo usermod -aG docker $USER
 
 echo "fnm, nodejsのインストール"
 curl -fsSL https://fnm.vercel.app/install | bash
+source ~/.bashrc
 fnm install --lts
 
 echo "firefoxのインストール"
